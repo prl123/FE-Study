@@ -34,3 +34,168 @@ small,
 .small {
     font-size: 13px;
 }
+/* 背景色样式 */
+.bg-white-only {
+    background-color: #fff;
+}
+.bg-info.dk,
+.bg-info .dk {
+    background-color: #36b0c8;
+}
+.bg-info a {
+    color: #fff;
+}
+.bg-white {
+    background-color: #fff;
+    color: #788188;
+}
+.bg-black.dk,
+.bg-black .dk {
+    background-color: #181f24;
+}
+/* 常用margin值 */
+.m-l-sm {
+    margin-left: 10px;
+}
+.m-l-n-xs {
+    margin-left: -5px;
+}
+/* form 样式 */
+.input-s-lg {
+    width: 250px;
+}
+
+.form-control {
+    border-color: #cbd5dd;
+    border-radius: 2px;
+}
+.form-control,
+.form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.form-control:focus {
+    border-color: #545ca6;
+}
+/* 工具类 */
+.rounded {
+    border-radius: 500px;
+}
+.no-border,
+.no-borders {
+    border-color: transparent;
+    border-width: 0;
+}
+
+.text-muted {
+    color: #939aa0;
+}
+/* vbox layout */
+/* >768 屏幕下 */
+@media (min-width: 768px) {
+    .app,
+    .app body {
+        height: 100%;
+        overflow: hidden;
+    }
+    .app .vbox > section,
+    .app .vbox > footer {
+        position: absolute;
+    }
+
+    .vbox {
+        display: table;
+        border-spacing: 0;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    .vbox > section,
+    .vbox > footer {
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* hbox */
+    .hbox {
+        display: table;
+        table-layout: fixed;
+        border-spacing: 0;
+        width: 100%;
+    }
+    .hbox > aside,
+    .hbox > section {
+        display: table-cell;
+        vertical-align: top;
+        height: 100%;
+        float: none;
+    }
+
+    /* header */
+    .aside {
+        width: 200px;
+    }
+    .header-md .navbar-brand {
+        line-height: 60px;
+    }
+    .header-md .navbar-brand img {
+        max-height: 30px;
+    }
+    .header-md .navbar-nav > li > a {
+        padding: 20px;
+    }
+
+    .header-md .navbar-form {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+/* 小于767屏幕下 */
+@media (max-width: 767px) {
+    html, body {
+        overflow-x: hidden;
+        min-height: 100%;
+    }
+}
+
+.header {
+    min-height: 50px;
+    padding:0 15px; /* 左右padding 15px; */
+}
+.header.navbar {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+}
+.navbar-header {
+    position: relative;
+}
+.navbar-header > .btn {
+    position: absolute;
+    font-size: 1.3em;
+    padding: 9px 16px;
+    line-height: 30px;
+    left: 0;
+}
+.navbar-brand {
+    float: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    height: auto;
+    line-height: 50px;
+    display: inline-block;
+    padding: 0 20px;
+}
+.navbar-brand:hover {
+    text-decoration: none;
+}
+@media (min-width: 768px) {
+    .header-md {
+        min-height: 60px;
+    }
+}
