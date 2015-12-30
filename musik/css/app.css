@@ -60,6 +60,13 @@ small,
 .m-l-n-xs {
     margin-left: -5px;
 }
+
+.m-t {
+    margin-top: 15px;
+}
+.m-b-sm {
+    margin-bottom: 10px;
+}
 /* form 样式 */
 .input-s-lg {
     width: 250px;
@@ -89,6 +96,27 @@ small,
 
 .text-muted {
     color: #939aa0;
+}
+.bg-black .text-muted {
+    color: #627b8c !important;
+}
+
+.text-xs {
+    font-size: 12px;
+}
+.text-active,
+.active > .text,
+.active > .auto .text {
+    display: none !important;
+}
+.active > .text-active,
+.active > .auto .text-active {
+    display: inline-block !important;
+}
+
+.padder {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 /* vbox layout */
 /* >768 屏幕下 */
@@ -151,6 +179,11 @@ small,
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    
+    /* header 下面元素样式设置 */
+    .vbox > header.header-md ~ section {
+        top: 60px;
+    }
 }
 /* 小于767屏幕下 */
 @media (max-width: 767px) {
@@ -193,6 +226,40 @@ small,
 }
 .navbar-brand:hover {
     text-decoration: none;
+}
+
+/* header 下面元素样式设置 */
+
+/* 侧边栏导航 */
+.nav-primary li > a > i {
+    margin: -10px -10px;
+    line-height: 38px;
+    width: 38px;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.nav-primary li > a > i:before {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-black .nav > li > a {
+    color: #8ca1af;
+}
+
+.bg-black .nav > li > a:hover,
+.bg-black .nav > li > a:focus {
+    background-color: #2c3942;
+}
+.bg-black .nav > li:hover > a,
+.bg-black .nav > li:focus > a,
+.bg-black .nav > li:active > a,
+.bg-black .nav > li.active > a {
+    color: #fff;
+    background-color: #2c3942;
 }
 @media (min-width: 768px) {
     .header-md {
